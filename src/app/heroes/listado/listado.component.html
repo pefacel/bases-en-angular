@@ -1,1 +1,19 @@
-<p>listado works!</p>
+<ul>
+
+<li *ngFor="let heroe of heroes">{{heroe}}</li>
+
+</ul>
+
+<h1 *ngIf="heroeBorrado.length!=0">Heroe borrado es: {{heroeBorrado}}</h1>
+<button class="border border-pink-600" (click)='borrar()'>Borrar</button>
+
+
+<h1 *ngIf="habilitar; else noh;">Hola</h1>
+<button (click)="setHabilitar()" class="border border-red-900">mostrar</button>
+
+
+<ng-template #noh>
+
+    <h2>no hola</h2>
+
+</ng-template>

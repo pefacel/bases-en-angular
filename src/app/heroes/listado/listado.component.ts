@@ -4,11 +4,23 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-listado',
   templateUrl: './listado.component.html',
 })
-export class ListadoComponent implements OnInit {
+export class ListadoComponent  {
 
-  constructor() { }
+heroes: string [] = ['Spiderman','Hulk', 'Thor'];
+heroeBorrado: string ='';
+habilitar: boolean = false;
+borrar(): void{
 
-  ngOnInit(): void {
-  }
+  this.heroeBorrado=this.heroes.pop();
+
+}
+
+setHabilitar(): void{
+
+  if (this.habilitar == false) {this.habilitar = true}
+  else if (this.habilitar == true) {this.habilitar = false}
+
+}
+
 
 }
